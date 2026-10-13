@@ -1,0 +1,281 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Soldier Boy — iPhone Oyun Testi</title>
+<meta name="description" content="Soldier Boy arkadaşlarla iPhone testi. Takımını kur, büyünü seç ve arenaya gir.">
+<meta name="robots" content="noindex,nofollow">
+<meta name="theme-color" content="#101b20">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Soldier Boy">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<link rel="manifest" href="../../manifest.webmanifest">
+<link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="../../assets/icon-180.png">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="tr_TR">
+<meta property="og:title" content="Soldier Boy — iPhone Oyun Testi">
+<meta property="og:description" content="Soldier Boy arkadaşlarla iPhone testi. Takımını kur, büyünü seç ve arenaya gir.">
+<meta property="og:image" content="https://copmasa.github.io/soldier-boy-test/assets/og.jpg">
+<meta property="og:url" content="https://copmasa.github.io/soldier-boy-test/playtest/game/">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://copmasa.github.io/soldier-boy-test/assets/og.jpg">
+<style>
+:root{color-scheme:dark;--bg:#101b20;--fg:#f7f1df;--gold:#edc476;--ink:#1b2726;--line:#435550;--card:#16272b}
+*{box-sizing:border-box}
+html,body{margin:0;background:var(--bg);color:var(--fg);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,Helvetica,sans-serif;-webkit-text-size-adjust:100%}
+button{font:inherit}
+.home{min-height:100dvh;padding:24px 16px;display:flex;justify-content:center;align-items:center;background:radial-gradient(ellipse at 50% 10%,#345149,#101b20 72%)}
+.card{width:100%;max-width:460px;overflow:hidden;border:1px solid var(--line);border-radius:24px;background:var(--card);box-shadow:0 25px 80px #0006}
+.cover{height:200px;position:relative;overflow:hidden}
+.cover img{width:100%;height:100%;object-fit:cover;object-position:50% 60%;display:block}
+.cover:after{content:'';position:absolute;inset:0;background:linear-gradient(transparent 40%,var(--card))}
+.edition{position:absolute;left:24px;top:22px;z-index:1;padding:8px 12px;border:1px solid #d9c38b80;background:#15251dcc;border-radius:30px;font-size:10px;letter-spacing:1.6px;font-weight:700}
+.content{position:relative;padding:0 26px 26px;margin-top:-20px;z-index:1}
+.eyebrow{font-size:10px;letter-spacing:1.7px;font-weight:700;color:var(--gold);margin:0 0 8px}
+h1{font-size:42px;letter-spacing:-1.5px;line-height:1.05;margin:0 0 14px}
+h2{font-size:25px;margin:8px 0 12px}
+.intro{font-size:16px;line-height:1.6;color:#d1ddd6;margin:0 0 24px}
+.quality{display:flex;align-items:center;gap:8px;margin:0 0 16px;font-size:13px;color:#b8c9c1;border:0;padding:0}
+.quality>span{margin-right:auto}
+.quality button{min-height:44px;min-width:76px;border-radius:10px;border:1px solid var(--line);background:transparent;color:var(--fg);cursor:pointer}
+.quality button[aria-pressed=true]{border-color:var(--gold);color:var(--gold);background:#edc47612}
+.primary{display:flex;align-items:center;justify-content:center;gap:12px;height:54px;width:100%;font-size:17px;font-weight:700;border:0;border-radius:12px;background:var(--gold);color:var(--ink);cursor:pointer}
+.primary:active{transform:scale(.98)}
+.secondary{display:flex;align-items:center;justify-content:center;gap:10px;width:100%;min-height:50px;margin-top:12px;border:1px solid #8da99a;border-radius:12px;background:transparent;color:#ecdfbc;cursor:pointer;font-size:15px;font-weight:600}
+.installed{display:flex;justify-content:center;gap:8px;color:#bad1b6;font-size:14px;margin:16px 0}
+.quick{display:flex;justify-content:space-between;gap:12px;margin:19px 0;font-size:11px;color:#b8c9c1}
+.quick span{display:flex;align-items:center;gap:5px}
+.note{font-size:12px;line-height:1.65;color:#a4b5af;margin:18px 0 0}
+details{border-top:1px solid var(--line);margin-top:20px;padding-top:17px;font-size:13px;color:#d1ddd6}
+summary{cursor:pointer;font-weight:700}
+details p{line-height:1.7;margin-bottom:0}
+.release{font-size:11px;line-height:1.6;overflow-wrap:anywhere;color:#a4b5af;margin-top:18px}
+svg.i{width:20px;height:20px;flex:none;stroke:currentColor;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.quick svg.i{width:16px;height:16px}
+.playing{position:fixed;inset:0;height:100dvh;padding:0;background:var(--bg);overflow:hidden}
+body.is-playing{overflow:hidden;overscroll-behavior:none}
+.stage{width:100%;height:100%;padding:env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left)}
+#unity-canvas{display:block;width:100%;height:100%;outline:none;touch-action:none;user-select:none;-webkit-user-select:none;-webkit-touch-callout:none}
+.panel{position:fixed;left:50%;top:50%;transform:translate(-50%,-50%);width:min(90%,390px);padding:30px;border:1px solid var(--line);border-radius:20px;background:var(--card);text-align:center;box-shadow:0 20px 60px #0008;z-index:20}
+.panel p{line-height:1.6;color:#b8c9c1}
+.panel progress{display:block;width:100%;height:9px;margin:28px 0 12px;accent-color:var(--gold)}
+.panel strong{color:var(--gold)}
+.panel .primary{margin-top:20px}
+.dialog{position:fixed;inset:0;z-index:50;display:flex;align-items:center;justify-content:center;padding:20px;background:#000a}
+.dialog[hidden]{display:none}
+.guide{width:100%;max-width:420px;max-height:calc(100dvh - 40px);overflow-y:auto;padding:24px;border:1px solid #b29c67;border-radius:18px;background:#20352f;color:var(--fg);box-shadow:0 20px 70px #0009}
+.guide h3{font-size:21px;line-height:1.3;margin:0 0 8px}
+.guide>p{font-size:14px;line-height:1.6;color:#c9d5c9;margin:0 0 14px}
+.steps{list-style:none;padding:0;margin:4px 0 18px;display:grid;gap:18px}
+.steps li{display:flex;align-items:flex-start;gap:12px;font-size:14px;line-height:1.5}
+.steps svg.i{width:28px;height:28px;color:var(--gold);margin-top:2px}
+.steps strong{font-size:15px}
+.steps p{margin:4px 0 0;color:#c9d5c9}
+.update{position:fixed;bottom:calc(env(safe-area-inset-bottom) + 8px);left:50%;transform:translateX(-50%);z-index:40;width:min(94%,440px);background:#20352ff5;border:1px solid #b29c67;border-radius:12px;padding:12px;display:flex;align-items:center;gap:10px;font-size:13px;box-shadow:0 6px 24px #0008}
+.update button{min-height:44px;flex:none;border:0;border-radius:10px;padding:0 16px;background:var(--gold);color:var(--ink);font-weight:700}
+[hidden]{display:none!important}
+@media(min-width:760px){.stage{max-width:calc(100dvh * .5625);margin:auto}.cover{height:245px}}
+@media(max-height:740px){.home:not(.playing){align-items:flex-start;padding-top:12px}.cover{height:150px}.content{padding:0 22px 22px}h1{font-size:36px}}
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="play" viewBox="0 0 24 24"><path d="M6 4l14 8-14 8z" fill="currentColor"/></symbol>
+  <symbol id="plus" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="3"/><path d="M12 8v8M8 12h8"/></symbol>
+  <symbol id="phone" viewBox="0 0 24 24"><rect x="6" y="2" width="12" height="20" rx="2.5"/><path d="M11 18h2"/></symbol>
+  <symbol id="shield" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M9 12l2 2 4-4"/></symbol>
+  <symbol id="share" viewBox="0 0 24 24"><path d="M12 3v13M7 8l5-5 5 5"/><path d="M5 12v7a2 2 0 002 2h10a2 2 0 002-2v-7"/></symbol>
+  <symbol id="check" viewBox="0 0 24 24"><path d="M5 12l5 5 9-10"/></symbol>
+  <symbol id="retry" viewBox="0 0 24 24"><path d="M3 12a9 9 0 109-9 9.7 9.7 0 00-6.7 2.8L3 8"/><path d="M3 3v5h5"/></symbol>
+</svg>
+
+<main id="home" class="home">
+  <div id="stage" class="stage" hidden><canvas id="unity-canvas" tabindex="0" aria-label="Soldier Boy oyun alanı"></canvas></div>
+
+  <section id="intro" class="card">
+    <div class="cover"><img src="../../assets/arena-cover.jpg" alt="Soldier Boy fantastik orman yolu"><span class="edition">ARKADAŞLARLA TEST · 2026.10.13.1</span></div>
+    <div class="content">
+      <p class="eyebrow">KAPİBARALAR HAZIR. SIRA SENDE.</p>
+      <h1>Soldier Boy</h1>
+      <p class="intro">Yeni bölgeleri, orkestra müziklerini ve yenilenen Şans Salonu’nu keşfet. Takımını kur, büyünü seç ve 250 bölümlük seferde ilerle.</p>
+      <fieldset class="quality" aria-label="Görüntü kalitesi">
+        <span>Görüntü</span>
+        <button type="button" data-quality="sharp" aria-pressed="true">Net</button>
+        <button type="button" data-quality="balanced" aria-pressed="false">Dengeli</button>
+      </fieldset>
+      <button id="start" class="primary" type="button"><svg class="i"><use href="#play"/></svg> Oyunu başlat</button>
+      <button id="install" class="secondary" type="button"><svg class="i"><use href="#plus"/></svg> iPhone’a Ekle</button>
+      <p id="installed" class="installed" hidden><svg class="i"><use href="#check"/></svg> Ana ekrandan açıldı</p>
+      <div class="quick"><span><svg class="i"><use href="#phone"/></svg> Dikey tut · Safari’de aç</span><span><svg class="i"><use href="#shield"/></svg> Ayrı test kaydı</span></div>
+      <p class="note"><span id="size-note"></span>Wi-Fi önerilir. Her cihaz kendi testine başlar; ilerlemen sonraki açılışlarda korunur. İkinci açılışta oyun telefondan, indirmeden yüklenir. Tarayıcı verilerini silmek veya özel gezinme kullanmak kaydını kaybettirebilir.</p>
+      <details><summary>Kurulum ve güncellemeler</summary><p>Önce ana ekrana ekleyip hep aynı simgeden oyna. Safari ile ana ekran uygulaması bazı iOS sürümlerinde ayrı kayıt tutabilir. Bu bir App Store uygulaması değil, internet gerektiren bir tarayıcı testidir. Yalnızca geliştirici yeni test sürümünü yayınladığında güncellenir. Savaş sırasında yeni sürüm gelirse oyununu kesmeyiz; bitirince Güncelle’ye dokunabilirsin.</p></details>
+      <details><summary>Büyüyü nasıl denerim?</summary><p>Deste ekranında büyü yuvasından Ateş Topu’nu seç. İsabetli vuruşlar büyüyü doldurur. Arenanın alt-solundaki yuvada “SÜRÜKLE” yazınca parmağını koy ve kaldırmadan arenaya taşı. Hedef çemberi parmağının biraz üstünde görünür; bırakınca büyü oraya atılır. Arena dışına veya yuvaya geri bırakmak iptal eder, doluluk harcanmaz.</p></details>
+      <details><summary>Daha büyük ekran ve akıcı oyun</summary><p>Safari’de Paylaş → Ana Ekrana Ekle ile açarsan tarayıcı çubukları olmadan oynayabilirsin. Oyun ayarlarında 30 / 60 / 120 FPS seçebilirsin; gerçek hız telefonuna ve güç tasarrufuna bağlıdır. Net modu daha keskin görüntü verir; telefon ısınıyor veya oyun takılıyorsa sayfayı yeniden açıp Dengeli’yi seç. Ses için telefonun sessiz modda olmamasına dikkat et.</p></details>
+      <p class="release">Test sürümü 2026.10.13.1 · web-69c9fac2cb88</p>
+    </div>
+  </section>
+
+  <section id="loading" class="panel" aria-live="polite" hidden>
+    <p class="eyebrow">SOLDIER BOY</p>
+    <h2 id="loading-title">Arena indiriliyor</h2>
+    <p id="loading-text">İlk açılış biraz sürebilir. Bu sayfayı açık tut.</p>
+    <progress id="bar" value="0" max="100" aria-label="Oyun yükleniyor"></progress>
+    <strong id="percent">%0</strong>
+  </section>
+
+  <section id="error" class="panel" role="alert" hidden>
+    <h2>Oyun açılamadı</h2>
+    <p id="error-text"></p>
+    <p class="note">Mesaj uygulamasının içindeki tarayıcı yerine Safari’de aç. Bellek uyarısı alırsan diğer sekmeleri kapat. iOS 16.4 veya daha yenisi gerekir.</p>
+    <button class="primary" type="button" onclick="location.reload()"><svg class="i"><use href="#retry"/></svg> Yeniden dene</button>
+  </section>
+</main>
+
+<div id="guide" class="dialog" hidden role="dialog" aria-modal="true" aria-labelledby="guide-title">
+  <div class="guide">
+    <h3 id="guide-title">Soldier Boy’u iPhone’a ekle</h3>
+    <p>iPhone, sitelerin tek dokunuşla ana ekrana yüklenmesine izin vermiyor. Bu üç adımı bir kez yapman yeterli.</p>
+    <ol class="steps">
+      <li><svg class="i"><use href="#phone"/></svg><div><strong>1 · Safari’de aç</strong><p>Bağlantı WhatsApp gibi bir uygulamanın içinde açıldıysa kopyalayıp Safari’ye yapıştır.</p></div></li>
+      <li><svg class="i"><use href="#share"/></svg><div><strong>2 · Paylaş’a dokun</strong><p>Yukarı ok çıkan kare simgesini seç. Bazı iOS sürümlerinde önce üç noktalı menüyü açman gerekir.</p></div></li>
+      <li><svg class="i"><use href="#plus"/></svg><div><strong>3 · Ana Ekrana Ekle</strong><p>Listede aşağı kaydırıp “Ana Ekrana Ekle”yi seç. “Web Uygulaması Olarak Aç” görünüyorsa açık bırak, ardından “Ekle”ye dokun.</p></div></li>
+    </ol>
+    <button id="guide-ok" class="primary" type="button">Anladım</button>
+  </div>
+</div>
+
+<div id="update" class="update" role="status" hidden><span>Yeni test sürümü hazır. Savaşını bitirince güncelle.</span><button type="button" onclick="location.reload()">Güncelle</button></div>
+
+<script>
+'use strict';
+const RELEASE = '2026.10.13.1';
+const ROOT = new URL('../../', location.href);
+const $ = id => document.getElementById(id);
+let quality = 'sharp', loading = false, loadedBuild = null;
+try { quality = localStorage.getItem('sb-quality') === 'balanced' ? 'balanced' : 'sharp'; } catch (_) {}
+
+function setQuality(q) {
+  quality = q;
+  try { localStorage.setItem('sb-quality', q); } catch (_) {}
+  document.querySelectorAll('[data-quality]').forEach(b => b.setAttribute('aria-pressed', String(b.dataset.quality === q)));
+}
+document.querySelectorAll('[data-quality]').forEach(b => b.addEventListener('click', () => setQuality(b.dataset.quality)));
+setQuality(quality);
+
+const standalone = matchMedia('(display-mode: standalone)').matches || navigator.standalone === true;
+if (standalone) { $('install').hidden = true; $('installed').hidden = false; }
+$('install').onclick = () => { $('guide').hidden = false; };
+$('guide-ok').onclick = () => { $('guide').hidden = true; };
+
+// Sharper iPhone output without allocating unbounded tablet/desktop buffers.
+function pixelRatio(width, height) {
+  const native = devicePixelRatio > 0 ? devicePixelRatio : 1;
+  const cap = quality === 'balanced' ? 1.5 : 3;
+  return Math.max(1, Math.min(native, cap, Math.sqrt(3000000 / Math.max(1, width * height))));
+}
+
+async function fetchJson(path) {
+  const r = await fetch(new URL(path + '?t=' + Date.now(), ROOT), { cache: 'no-store' });
+  if (!r.ok) throw new Error('HTTP ' + r.status);
+  return r.json();
+}
+
+async function checkRelease() {
+  if (document.visibilityState === 'hidden') return;
+  try {
+    const release = await fetchJson('release.json');
+    if (release.version && release.version !== RELEASE) {
+      // Never interrupt a running battle when Safari resumes an old page.
+      if (!loading) location.reload(); else $('update').hidden = false;
+    }
+  } catch (_) { /* offline: keep the running game */ }
+}
+addEventListener('pageshow', checkRelease);
+document.addEventListener('visibilitychange', checkRelease);
+
+fetchJson('game/build.json').then(b => {
+  $('size-note').textContent = 'İlk açılışta yaklaşık ' + b.downloadMB + ' MB indirilir. ';
+}).catch(() => {});
+
+async function readyWorker() {
+  if (!('serviceWorker' in navigator)) throw new Error('Bu tarayıcı oyunu açamıyor. Safari ile aç.');
+  if (typeof DecompressionStream === 'undefined') throw new Error('iOS sürümün eski. Ayarlar → Genel → Yazılım Güncelleme’den iOS’u güncelle (en az 16.4).');
+  const reg = await navigator.serviceWorker.register(new URL('sw.js', ROOT), { scope: ROOT.pathname });
+  await navigator.serviceWorker.ready;
+  if (!navigator.serviceWorker.controller) {
+    await new Promise(resolve => {
+      const done = () => resolve();
+      navigator.serviceWorker.addEventListener('controllerchange', done, { once: true });
+      setTimeout(done, 4000);
+    });
+  }
+  if (!navigator.serviceWorker.controller) {
+    // First visit in some browsers: the worker controls the page after one reload.
+    if (!sessionStorage.getItem('sb-sw-reload')) { sessionStorage.setItem('sb-sw-reload', '1'); location.reload(); await new Promise(() => {}); }
+    throw new Error('Oyun yükleyicisi başlatılamadı. Sayfayı kapatıp yeniden aç.');
+  }
+  navigator.serviceWorker.controller.postMessage('refresh');
+  return reg;
+}
+
+function show(id) { ['intro', 'loading', 'error'].forEach(x => $(x).hidden = x !== id); }
+
+function progress(value) {
+  const p = Math.max(0, Math.min(100, Math.round(value * 100)));
+  if (p < Number($('bar').value)) return;
+  $('bar').value = p; $('percent').textContent = '%' + p;
+  if (p >= 90) { $('loading-title').textContent = 'Oyun başlatılıyor'; $('loading-text').textContent = 'Dosyalar hazır. Arena açılıyor…'; }
+}
+
+async function start() {
+  if (loading) return;
+  loading = true;
+  $('home').classList.add('playing'); document.body.classList.add('is-playing');
+  $('stage').hidden = false; show('loading');
+  try {
+    await readyWorker();
+    const build = await fetchJson('game/build.json');
+    loadedBuild = build.buildId;
+    if (!window.createUnityInstance) await new Promise((resolve, reject) => {
+      const s = document.createElement('script');
+      s.src = new URL(build.loader, ROOT).href;
+      s.onload = resolve;
+      s.onerror = () => reject(new Error('Oyun motoru indirilemedi. İnternet bağlantını kontrol et.'));
+      document.body.appendChild(s);
+    });
+    const canvas = $('unity-canvas');
+    const bounds = canvas.getBoundingClientRect();
+    const stream = name => new URL('game/stream/' + name, ROOT).href;
+    await window.createUnityInstance(canvas, {
+      dataUrl: stream('data'), frameworkUrl: stream('framework.js'), codeUrl: stream('wasm'),
+      streamingAssetsUrl: new URL('game/StreamingAssets', ROOT).href,
+      companyName: 'Soldier Boy Studio', productName: 'Soldier Boy', productVersion: build.buildId,
+      // The worker already keeps the compressed chunks; skip Unity's second (decompressed) copy.
+      cacheControl: () => 'no-store',
+      autoSyncPersistentDataPath: true,
+      matchWebGLToCanvasSize: true,
+      devicePixelRatio: pixelRatio(bounds.width, bounds.height),
+      showBanner: (message, type) => { if (type === 'error') console.error(message); },
+    }, progress);
+    progress(1);
+    $('loading').hidden = true;
+    navigator.serviceWorker.controller && navigator.serviceWorker.controller.postMessage('prune');
+  } catch (reason) {
+    console.error(reason);
+    $('error-text').textContent = reason && reason.message ? reason.message : 'Oyun yüklenemedi. Safari’yi güncelle ve diğer sekmeleri kapatarak tekrar dene.';
+    show('error');
+  }
+}
+$('start').onclick = start;
+// Coming back from the one-time reload that lets the worker take over: continue.
+if (sessionStorage.getItem('sb-sw-reload') === '1' && navigator.serviceWorker && navigator.serviceWorker.controller) {
+  sessionStorage.removeItem('sb-sw-reload'); start();
+}
+// Opened from the home-screen icon: go straight into the game.
+if (standalone && new URLSearchParams(location.search).has('play')) start();
+</script>
+</body>
+</html>
