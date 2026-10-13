@@ -7,7 +7,7 @@
  * second full copy of the game sits in page memory. Chunks are cached under
  * their content hash, so a second launch starts without downloading again.
  */
-const VERSION = '2026.10.13.1-web-69c9fac2cb88';
+const VERSION = '2026.10.13.2-web-a2e97b273f6d';
 const CHUNK_CACHE = 'sb-chunks-v1';
 let manifestPromise = null;
 

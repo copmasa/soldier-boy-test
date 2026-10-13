@@ -96,11 +96,11 @@ body.is-playing{overflow:hidden;overscroll-behavior:none}
   <div id="stage" class="stage" hidden><canvas id="unity-canvas" tabindex="0" aria-label="Soldier Boy oyun alanı"></canvas></div>
 
   <section id="intro" class="card">
-    <div class="cover"><img src="../../assets/arena-cover.jpg" alt="Soldier Boy fantastik orman yolu"><span class="edition">ARKADAŞLARLA TEST · 2026.10.13.1</span></div>
+    <div class="cover"><img src="../../assets/arena-cover.jpg" alt="Soldier Boy fantastik orman yolu"><span class="edition">ARKADAŞLARLA TEST · 2026.10.13.2</span></div>
     <div class="content">
       <p class="eyebrow">KAPİBARALAR HAZIR. SIRA SENDE.</p>
       <h1>Soldier Boy</h1>
-      <p class="intro">Yeni bölgeleri, orkestra müziklerini ve yenilenen Şans Salonu’nu keşfet. Takımını kur, büyünü seç ve 250 bölümlük seferde ilerle.</p>
+      <p class="intro">Başlangıç paketiyle Bölüm 23’ten başlıyorsun: 10 karakter, Ateş Topu ve Şifa büyüleri açık, kesende 2.500 elmas var. Takımını kur, ustalıkları yükselt ve 250 bölümlük seferde ilerle.</p>
       <fieldset class="quality" aria-label="Görüntü kalitesi">
         <span>Görüntü</span>
         <button type="button" data-quality="sharp" aria-pressed="true">Net</button>
@@ -112,9 +112,10 @@ body.is-playing{overflow:hidden;overscroll-behavior:none}
       <div class="quick"><span><svg class="i"><use href="#phone"/></svg> Dikey tut · Safari’de aç</span><span><svg class="i"><use href="#shield"/></svg> Ayrı test kaydı</span></div>
       <p class="note"><span id="size-note"></span>Wi-Fi önerilir. Her cihaz kendi testine başlar; ilerlemen sonraki açılışlarda korunur. İkinci açılışta oyun telefondan, indirmeden yüklenir. Tarayıcı verilerini silmek veya özel gezinme kullanmak kaydını kaybettirebilir.</p>
       <details><summary>Kurulum ve güncellemeler</summary><p>Önce ana ekrana ekleyip hep aynı simgeden oyna. Safari ile ana ekran uygulaması bazı iOS sürümlerinde ayrı kayıt tutabilir. Bu bir App Store uygulaması değil, internet gerektiren bir tarayıcı testidir. Yalnızca geliştirici yeni test sürümünü yayınladığında güncellenir. Savaş sırasında yeni sürüm gelirse oyununu kesmeyiz; bitirince Güncelle’ye dokunabilirsin.</p></details>
-      <details><summary>Büyüyü nasıl denerim?</summary><p>Deste ekranında büyü yuvasından Ateş Topu’nu seç. İsabetli vuruşlar büyüyü doldurur. Arenanın alt-solundaki yuvada “SÜRÜKLE” yazınca parmağını koy ve kaldırmadan arenaya taşı. Hedef çemberi parmağının biraz üstünde görünür; bırakınca büyü oraya atılır. Arena dışına veya yuvaya geri bırakmak iptal eder, doluluk harcanmaz.</p></details>
+      <details><summary>Başlangıç paketinde ne var?</summary><p>İlk açılışta kayıt Bölüm 22’yi bitirmiş gibi kurulur ve sıradaki bölüm 23 olur. O noktaya kadar açılan karakterler (Asker, Okçu, Tank, Şifacı, Büyücü, Ninja, Buz Büyücüsü, Bombacı, Paladin, Mızrakçı) ve Ateş Topu ile Şifa büyüleri hazırdır. 2.500 elmasla Deste ekranından karakterlerinin ustalık seviyesini yükseltebilirsin. Paket her cihazda bir kez verilir; harcadığın elmas geri gelmez, ilerlemen de geri alınmaz. Önceki bölümleri istersen yeniden oynayabilirsin.</p></details>
+      <details><summary>Büyüyü nasıl denerim?</summary><p>Deste ekranında büyü yuvasından Ateş Topu’nu ya da Şifa’yı seç. İsabetli vuruşlar büyüyü doldurur. Arenanın alt-solundaki yuvada “SÜRÜKLE” yazınca parmağını koy ve kaldırmadan arenaya taşı. Hedef çemberi parmağının biraz üstünde görünür; bırakınca büyü oraya atılır. Arena dışına veya yuvaya geri bırakmak iptal eder, doluluk harcanmaz.</p></details>
       <details><summary>Daha büyük ekran ve akıcı oyun</summary><p>Safari’de Paylaş → Ana Ekrana Ekle ile açarsan tarayıcı çubukları olmadan oynayabilirsin. Oyun ayarlarında 30 / 60 / 120 FPS seçebilirsin; gerçek hız telefonuna ve güç tasarrufuna bağlıdır. Net modu daha keskin görüntü verir; telefon ısınıyor veya oyun takılıyorsa sayfayı yeniden açıp Dengeli’yi seç. Ses için telefonun sessiz modda olmamasına dikkat et.</p></details>
-      <p class="release">Test sürümü 2026.10.13.1 · web-69c9fac2cb88</p>
+      <p class="release">Test sürümü 2026.10.13.2 · web-a2e97b273f6d</p>
     </div>
   </section>
 
@@ -151,7 +152,7 @@ body.is-playing{overflow:hidden;overscroll-behavior:none}
 
 <script>
 'use strict';
-const RELEASE = '2026.10.13.1';
+const RELEASE = '2026.10.13.2';
 const ROOT = new URL('../../', location.href);
 const $ = id => document.getElementById(id);
 let quality = 'sharp', loading = false, loadedBuild = null;
