@@ -1,45 +1,45 @@
 {
- "buildId": "web-1685bc02a514",
- "version": "2026.11.02.4",
+ "buildId": "web-fd50a43ad241",
+ "version": "2026.11.02.5",
  "downloadMB": 179,
- "loader": "game/6979242b12a79bd8.loader.js",
+ "loader": "game/be02cf1c9e79b8df.loader.js",
  "files": {
   "data": {
    "chunks": [
-    "game/chunks/592ccfd024a4b097.data.0.bin",
-    "game/chunks/592ccfd024a4b097.data.1.bin",
-    "game/chunks/592ccfd024a4b097.data.2.bin",
-    "game/chunks/592ccfd024a4b097.data.3.bin",
-    "game/chunks/592ccfd024a4b097.data.4.bin",
-    "game/chunks/592ccfd024a4b097.data.5.bin",
-    "game/chunks/592ccfd024a4b097.data.6.bin",
-    "game/chunks/592ccfd024a4b097.data.7.bin",
-    "game/chunks/592ccfd024a4b097.data.8.bin",
-    "game/chunks/592ccfd024a4b097.data.9.bin",
-    "game/chunks/592ccfd024a4b097.data.10.bin"
+    "game/chunks/3f210d64107f677c.data.0.bin",
+    "game/chunks/3f210d64107f677c.data.1.bin",
+    "game/chunks/3f210d64107f677c.data.2.bin",
+    "game/chunks/3f210d64107f677c.data.3.bin",
+    "game/chunks/3f210d64107f677c.data.4.bin",
+    "game/chunks/3f210d64107f677c.data.5.bin",
+    "game/chunks/3f210d64107f677c.data.6.bin",
+    "game/chunks/3f210d64107f677c.data.7.bin",
+    "game/chunks/3f210d64107f677c.data.8.bin",
+    "game/chunks/3f210d64107f677c.data.9.bin",
+    "game/chunks/3f210d64107f677c.data.10.bin"
    ],
    "mime": "application/octet-stream",
-   "bytes": 172558441,
-   "uncompressedBytes": 189905088,
-   "sha256": "592ccfd024a4b097d8a0c75b5e65197edfc72ed18b48d5f9b44d78363ec5217b"
+   "bytes": 172556085,
+   "uncompressedBytes": 189906995,
+   "sha256": "3f210d64107f677c4ea47173a6a271f8b01945e1a73f66cebfbede645354f4c4"
   },
   "framework.js": {
    "chunks": [
-    "game/chunks/5858031b3c0204d2.framework.js.0.bin"
+    "game/chunks/12e15cde43689f7a.framework.js.0.bin"
    ],
    "mime": "application/javascript",
    "bytes": 88338,
    "uncompressedBytes": 437070,
-   "sha256": "5858031b3c0204d2ecf5853c512d30de63d805cbdab0347b6beff2ecd9c74f0f"
+   "sha256": "12e15cde43689f7aec50a4df9ed3cd0f6e959571ae371baa52991cca309c2632"
   },
   "wasm": {
    "chunks": [
-    "game/chunks/00442ee69c022bbe.wasm.0.bin"
+    "game/chunks/27222082fef437f1.wasm.0.bin"
    ],
    "mime": "application/wasm",
-   "bytes": 15242092,
-   "uncompressedBytes": 62384583,
-   "sha256": "00442ee69c022bbef6b33e821d599ca10baef3b66360a025c7f7dcf00ad4ef72"
+   "bytes": 15250410,
+   "uncompressedBytes": 62399532,
+   "sha256": "27222082fef437f16baa0b2d18a9d33b4071f1f201c5886d9a4d2d77b84f598f"
   }
  }
 }
